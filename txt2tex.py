@@ -1,5 +1,4 @@
 # TODO
-# - parse tree structure, so that input file can have nicely indented trees
 # - generate all trees in one forest environment? then adjunction arrows are easier to draw using tikz named nodes
 # - for STAG pairs: find bottom-left corner of source, bottom right corner of target, and give them special labels. then draw STAG brackets/MCsets with a method like the following:
 #
@@ -16,8 +15,22 @@ parser = argparse.ArgumentParser(description='Generate LaTeX trees from brackete
 parser.add_argument('-p', dest='preamble', action='store_true', help='Include preamble (macro definitions and \\usepackage{}s)?')
 parser.add_argument('-f', dest='path', help='Path to file containing trees.' )
  
-
 args = parser.parse_args()
+
+def parseTree( string ):
+  return parseTree_( string, 0, '' )
+
+def parseTree_( string, openBraces, tree ):
+  char = string[0]
+  if char == '[':
+    return parseTree_( string[1:], openBraces+1, tree+char )
+  elif char == ']':
+    if openBraces-1 == 0:
+      return (string[1:], tree+char)
+    else:
+      return parseTree_( string[1:], openBraces-1, tree+char )
+  else:
+    return parseTree_( string[1:], openBraces, tree+char )
 
 preamble = """
 \\usepackage{adjustbox}
@@ -70,16 +83,16 @@ preamble = """
 f = open( args.path )
 s = f.read()
 f.close()
-s = s.split('\n')
 
 if args.preamble:
   print( preamble )
 
-for line in s:
-  line = line.strip()
-  if line == '':
-    continue
-  (src_tree, tgt_tree) = line.split('#')
-  src_tree = re.sub( r"\((\d+)\)", r"\\circled{\1}", src_tree )
-  tgt_tree = re.sub( r"\((\d+)\)", r"\\circled{\1}", tgt_tree )
+while s.strip() != '':
+  try:
+    (s,src_tree) = parseTree(s)
+    (s,tgt_tree) = parseTree(s)
+  except IndexError:
+    print('Couldn\'t parse tree! Are there are even number of trees in the input file?')
+  src_tree = re.sub( r"\((\d+)\)", r"\\circled{\1}", src_tree.strip() )
+  tgt_tree = re.sub( r"\((\d+)\)", r"\\circled{\1}", tgt_tree.strip() )
   print( "\stagrule{"+src_tree+"}{"+tgt_tree+"}" )
