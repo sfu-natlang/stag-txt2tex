@@ -6,15 +6,22 @@ python txt2tex.py (-p) -f filename
 
 If -p is specified, the program will output a preamble containing macro definitions and \usepackage{} commands.
 
-The input file should contain tree-pairs in a bracketed representation, one pair per line, separated by '#'. Numbers in parentheses (1) will expand to circled link numbers. The following is a valid input file:
+The input file should contain tree-pairs in a bracketed representation. Numbers in parentheses (1) will expand to circled link numbers. The following is a valid input file, which will expand into two tree-pairs:
 
 ```
-[$C_B(2)$ [$\alpha$][$\beta(1)$]]#[$C_B(2)$ [$\alpha$ [$\beta(1)$]]]
-[$C_B(2)$ [$\beta(1)$]]#[$C_B$ [$\alpha(2)$ [$\beta(1)$]]]
+[$C_B(2)$ 
+	[$\alpha$]
+	[$\beta(1)$]
+]
+[$C_B(2)$ 
+	[$\alpha$ 
+		[$\beta(1)$]
+	]
+]
+[$C_B(2)$ [$\beta(1)$]][$C_B$ [$\alpha(2)$ [$\beta(1)$]]]
 ```
 
 # To-do
-- Actually parse the tree structure, so the input file can have nicely indented trees spanning multiple lines.
 - Generate all trees in one forest environment? Then adjunction arrows would be easier to draw using tikz named nodes.
 - For STAG pairs: find bottom-left node of source, bottom right node of target, and give them special labels. Then draw STAG brackets/MCsets with a method like the following:
 ```
