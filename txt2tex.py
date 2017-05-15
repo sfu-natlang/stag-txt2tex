@@ -36,9 +36,12 @@ def parseTree_( string, openBraces, tree ):
 preamble = """
 \\usepackage{adjustbox}
 \\usepackage{forest}
+\\usepackage{amsmath}
 
 % Boxed/circled numbers, for drawing linked nodes:
 \\newcommand{\\circled}[1]{\\textcircled{\\scalebox{0.8}{#1}}}
+\\renewcommand{\\boxed}[1]{\\raisebox{1pt}{\\scalebox{0.65}{\\fbox{#1}}}}
+
 
 % (Adapted from) Dennis's STAG angle brackets:
 \\newlength{\\abw}
