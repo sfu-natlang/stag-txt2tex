@@ -2,9 +2,11 @@
 Simple macros for converting bracketed trees into LaTeX STAG tree-pairs.
 
 Usage:
-python txt2tex.py (-p) -f filename
+python txt2tex.py (-p) (-c) -f filename
 
 If -p is specified, the program will output a preamble containing macro definitions and \usepackage{} commands.
+
+If -c is specified, links will be drawn in circles (default behavior draws boxed link numbers).
 
 The input file should contain tree-pairs in a bracketed representation. Numbers in parentheses (1) will expand to circled link numbers. The following is a valid input file, which will expand into two tree-pairs:
 

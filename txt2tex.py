@@ -13,6 +13,7 @@ import argparse
 
 parser = argparse.ArgumentParser(description='Generate LaTeX trees from bracketed representations.')
 parser.add_argument('-p', dest='preamble', action='store_true', help='Include preamble (macro definitions and \\usepackage{}s)?')
+parser.add_argument('-c', dest='circle', action='store_true', help='Circle links? (default behavior puts links in boxes)')
 parser.add_argument('-f', dest='path', help='Path to file containing trees.' )
  
 args = parser.parse_args()
@@ -93,6 +94,7 @@ while s.strip() != '':
     (s,tgt_tree) = parseTree(s)
   except IndexError:
     print('Couldn\'t parse tree! Are there are even number of trees in the input file?')
-  src_tree = re.sub( r"\((\d+)\)", r"\\circled{\1}", src_tree.strip() )
-  tgt_tree = re.sub( r"\((\d+)\)", r"\\circled{\1}", tgt_tree.strip() )
+  link_annotation = r"\\circled{\1}" if args.circle else r"\\boxed{\1}"
+  src_tree = re.sub( r"\((\d+)\)", link_annotation, src_tree.strip() )
+  tgt_tree = re.sub( r"\((\d+)\)", link_annotation, tgt_tree.strip() )
   print( "\stagrule{"+src_tree+"}{"+tgt_tree+"}" )
