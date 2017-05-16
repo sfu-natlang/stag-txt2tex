@@ -1,0 +1,7 @@
+$\alpha$who [DP [D [who]]]
+{ $\alpha'$who [T [$z$]]
+t1 [$C_B(2)$ 
+        [$\alpha$]
+        [$\beta(1)$]
+] }
+t1 [$C_B(2)$ [$\beta(1)$]] { $\alpha'$who [T [$z$]] t2 [$C_B$ [$\alpha(2)$ [$\beta(1)$]]] }

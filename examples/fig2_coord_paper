@@ -1,0 +1,26 @@
+$\alpha\textrm{hates}_{\textrm{DP}}$ 
+[$\textrm{TP}(3)$ 
+	[$\textrm{DP}_i\downarrow(1)$] 
+	[T' 
+		[T] 
+		[VP 
+			[DP [$t_i$] ]
+			[V' 
+				[V [hates] ] 
+				[$\textrm{DP}\downarrow(2)$]
+			] 
+		] 
+	] 
+]
+$\alpha'\textrm{hates}_{\textrm{DP}}$ 
+[$t$ 
+	[$\langle e,t \rangle(3)$ 
+		[$\lambda x$] 
+		[$t$ 
+			[$e\downarrow(1)$] 
+			[$\langle e,t \rangle$ 
+				[$\lambda y.hates(y,x)$] 
+			] 
+		] 
+	] 
+]
