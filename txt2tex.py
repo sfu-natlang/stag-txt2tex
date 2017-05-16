@@ -21,15 +21,20 @@ args = parser.parse_args()
 
 def parseNamedTree( s ):
   s = s.strip()
+  if s == '':
+    raise ValueError("should not call parseNamedTree with an empty string")
   if s[0] == '{':
     return ( ('',) + parseMCSet( s ) )
   elif s[0] == '[':
     return ( ('',) + parseTree( s ) )
   else:
     name, rest = s.split(' ', 1)
+    #print "name:", name
+    #print "rest:", rest
     return ( (name,) + parseTree( rest ) )  
 
 def parseMCSet( s ):
+  #print "entering parseMCSet"
   if s[0] != '{':
     raise ValueError("bad input for MCSet")
   rest = s[1:]
@@ -45,7 +50,6 @@ def parseMCSet( s ):
   else:
       mcset = r'\mcset{'+left_tree+'}{'+right_tree+'}'
   return (rest, mcset)
-
 
 def parseTree( s ):
   return parseTree_( s, 0, '' )
@@ -210,6 +214,8 @@ footer = r'\end{adjustbox}'
 
 f = open( args.path )
 s = f.read()
+s = s.replace("\t", " ")
+s = s.replace("\n", " ")
 f.close()
 
 if args.preamble:
@@ -217,6 +223,11 @@ if args.preamble:
 
 print(header)
 while s.strip() != '':
+  if s == '': 
+    break
+  else:
+    #print "s:", s
+    print 
   try:
     (src_name, s, src_tree) = parseNamedTree(s)
     (tgt_name, s, tgt_tree) = parseNamedTree(s)
