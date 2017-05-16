@@ -14,12 +14,12 @@ $\alpha\textrm{hates}_{\textrm{DP}}$
 ]
 $\alpha'\textrm{hates}_{\textrm{DP}}$ 
 [$t$ 
-	[$\langle e,t \rangle(3)$ 
+	[{$\langle e,t \rangle(3)$}
 		[$\lambda x$] 
 		[$t$ 
 			[$e\downarrow(1)$] 
-			[$\langle e,t \rangle$ 
-				[$\lambda y.hates(y,x)$] 
+			[{$\langle e,t \rangle$}
+				[{$\lambda y.hates(y,x)$}] 
 			] 
 		] 
 	] 
