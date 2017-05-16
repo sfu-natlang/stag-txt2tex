@@ -13,6 +13,7 @@ import argparse
 
 parser = argparse.ArgumentParser(description='Generate LaTeX trees from bracketed representations.')
 parser.add_argument('-p', dest='preamble', action='store_true', help='Include preamble (macro definitions and \\usepackage{}s)?')
+parser.add_argument('-s', dest='scale', type=float, default=0.6, help='scale the box containing the entire figure by this much')
 parser.add_argument('-c', dest='circle', action='store_true', help='Circle links? (default behavior puts links in boxes)')
 parser.add_argument('-f', dest='path', help='Path to file containing trees.' )
  
@@ -204,6 +205,9 @@ preamble = """
 }
 """
 
+header = r'\begin{adjustbox}{scale=' + str(args.scale) + r'}'
+footer = r'\end{adjustbox}'
+
 f = open( args.path )
 s = f.read()
 f.close()
@@ -211,6 +215,7 @@ f.close()
 if args.preamble:
   print( preamble )
 
+print(header)
 while s.strip() != '':
   try:
     (src_name, s, src_tree) = parseNamedTree(s)
@@ -226,4 +231,4 @@ while s.strip() != '':
       print( r'\namedstagmcset{'+src_name+'}{'+src_tree+'}{'+tgt_tree+'}' )
   else:
       print( r'\stagrule{'+src_tree+'}{'+tgt_tree+'}' )
-
+print(footer)
