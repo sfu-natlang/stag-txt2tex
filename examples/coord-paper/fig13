@@ -1,0 +1,64 @@
+$\gamma_8$ 
+[TP [TP
+		[$\textrm{DP}_i$ 
+			[D [a]]
+			[NP [N [student]]]]
+		[T' 
+			[T] 
+			[VP [DP [$t_i$]]
+				[V' [V [takes]]
+					[DP [$\epsilon$]]]]]]
+	[Conj [and]]
+	[TP
+		[$\textrm{DP}_i$ 
+			[D [a]]
+			[NP [N [professor]]]]
+		[T' 
+			[T] 
+			[VP [DP [$t_i$]]
+				[V' [V [teaches]]
+					[DP 
+						[D [every]]
+						[NP [N [course]]]
+					]
+				]
+			]
+		]
+	]
+]
+$\gamma'_8$
+[$t$
+    [{$\langle \langle e,t \rangle, t \rangle$}
+		[{$\lambda P.\forall x_2\{\textrm{course}(x_2)\}\{P(x_2)\}$}]]
+    [{$\langle e,t \rangle$}
+		[{$\lambda z_2$}]
+		[$t$
+			[{$\langle e,t \rangle$}
+				[{$\langle e,t \rangle$}
+					[{$\lambda x$}]
+					[$t$
+						[{$\langle \langle e,t \rangle, t \rangle$}
+							[{$\lambda P.\exists x_1\{\textrm{stud}(x_1)\}\{P(x_1)\}$}]]
+						[{$\langle e,t \rangle$}
+							[$e$ [$z_1$]]
+							[{$\langle e,t \rangle$}
+								[{$\lambda y.\textrm{takes}(y, x)$}]]]
+					]
+				]
+				[$\wedge$]
+				[{$\langle e,t \rangle$}
+					[{$\lambda x$}]
+					[$t$
+						[{$\langle \langle e,t \rangle, t \rangle$}
+							[{$\lambda P.\exists x_1\{\textrm{prof}(x_1)\}\{P(x_1)\}$}]]
+						[{$\langle e,t \rangle$}
+							[$e$ [$z_1$]]
+							[{$\langle e,t \rangle$}
+								[{$\lambda y.\textrm{teaches}(y, x)$}]]]
+					]
+				]
+			]
+			[$e$ [$z_2$]]
+		]
+	]
+]

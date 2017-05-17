@@ -1,0 +1,23 @@
+$\alpha\textrm{a\_student}$
+[DP [D [a]]
+	[NP [N [student]]]
+]
+{
+$\alpha'\textrm{a\_student}$
+[$e$ [$z_1$]]
+$\beta'\textrm{a\_student}$
+[$t$
+    [{$\langle \langle e,t \rangle, t \rangle$}
+		[{$\lambda P$}]
+		[$t$ 
+			[{$\exists x_1$}]
+			[$t$ 
+				[{$\langle e,t \rangle$}
+					[$\lambda y_1.\textrm{student}(y_1)$]]
+				[$e$ [$x_1$]]]
+			[$t$ [$P(x_1)$]]]]
+    [{$\langle e,t \rangle$}
+		[{$\lambda z_1$}]
+		[$t\ast$]]
+]
+}

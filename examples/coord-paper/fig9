@@ -1,0 +1,16 @@
+$\delta_6$
+[{$\alpha\textrm{wh\_hates}_{\{\textrm{DP}_j\}}$}
+    [{$\alpha\textrm{Kim}$},edge label={node[midway,left,font=\scriptsize]{\fbox{1}}}]
+    [{$\beta\textrm{likes}_{\{\textrm{DP}_i\}}$},edge label={node[midway,left,font=\scriptsize]{\fbox{3}}}
+        [{$\alpha\textrm{Sue}$},edge label={node[midway,left,font=\scriptsize]{\fbox{1}}}]
+    ]   
+    [{$\alpha\textrm{who}$},edge label={node[midway,right,font=\scriptsize]{\fbox{2}}}]
+]
+$\delta'_6$
+[{$\alpha'\textrm{wh\_hates}_{\{\textrm{DP}_j\}}$}
+    [{$\alpha'\textrm{Kim}$},edge label={node[midway,left,font=\scriptsize]{\fbox{1}}}]
+    [{$\beta'\textrm{likes}_{\{\textrm{DP}_i\}}$},edge label={node[midway,left,font=\scriptsize]{\fbox{3}}}
+        [{$\alpha'\textrm{Sue}$},edge label={node[midway,left,font=\scriptsize]{\fbox{1}}}]
+    ]   
+    [{$\{\alpha'\textrm{who},\beta'\textrm{who}\}$},edge label={node[midway,right,font=\scriptsize]{\fbox{2}}}]
+]

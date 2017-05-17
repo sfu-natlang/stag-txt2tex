@@ -1,0 +1,16 @@
+$\delta_8$
+[{$\alpha\textrm{teaches}_{\{\textrm{DP}\}}$}
+    [{$\alpha\textrm{a\_professor}$},edge label={node[midway,left,font=\scriptsize]{\fbox{1}}}]
+    [{$\beta\textrm{takes}_{\{\textrm{DP}\}}$},edge label={node[midway,left,font=\scriptsize]{\fbox{3}}}
+        [{$\alpha\textrm{a\_student}$},edge label={node[midway,left,font=\scriptsize]{\fbox{1}}}]
+    ]   
+    [{$\alpha\textrm{every\_course}$},edge label={node[midway,right,font=\scriptsize]{\fbox{2}}}]
+]
+$\delta'_8$
+[{$\alpha'\textrm{teaches}_{\{\textrm{DP}\}}$}
+    [{$\{\alpha'\textrm{a\_prof},\beta'\textrm{a\_prof}\}$},edge label={node[midway,left,font=\scriptsize]{\fbox{1}}}]
+    [{$\beta'\textrm{takes}_{\{\textrm{DP}\}}$},edge label={node[midway,left,font=\scriptsize]{\fbox{3}}}
+        [{$\{\alpha'\textrm{a\_student},\beta'\textrm{a\_student}\}$},edge label={node[midway,left,font=\scriptsize]{\fbox{1}}}]
+    ]   
+    [{$\{\alpha'\textrm{every\_course},\beta'\textrm{every\_course}\}$},edge label={node[midway,right,font=\scriptsize]{\fbox{2}}}]
+]

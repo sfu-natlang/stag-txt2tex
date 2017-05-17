@@ -1,0 +1,18 @@
+$\alpha$who
+[DP [D [who]]]
+{
+$\alpha'$who
+[$e$ [$z$]]
+$\beta'$who
+[$t$
+    [{$\langle \langle e,t \rangle, t \rangle$}
+		[{$\lambda P$}]
+		[$t$ 
+			[$\textrm{WH}x$]
+			[$t$ [$\textrm{person}(x)$]]
+			[$t$ [$P(x)$]]]]
+    [{$\langle e,t \rangle$}
+		[{$\lambda z$}]
+		[$t\ast$]]
+]
+}

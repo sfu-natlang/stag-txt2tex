@@ -1,0 +1,16 @@
+$\delta_2$
+[{$\alpha\textrm{hates}_{\{\textrm{DP}_i\}}$}
+    [$\alpha\textrm{Sue}$,edge label={node[midway,left,font=\scriptsize]{\fbox{1}}}]
+    [$\beta\textrm{likes}_{\{\textrm{DP}_i\}}$,edge label={node[midway,left,font=\scriptsize]{\fbox{3}}}
+        [$\alpha\textrm{Kim}$,edge label={node[midway,left,font=\scriptsize]{\fbox{1}}}]
+    ]   
+    [$\alpha\textrm{Pete}$,edge label={node[midway,right,font=\scriptsize]{\fbox{2}}}]
+]
+$\delta'_2$
+[{$\alpha'\textrm{hates}_{\{\textrm{DP}_i\}}$}
+    [$\alpha'\textrm{Sue}$,edge label={node[midway,left,font=\scriptsize]{\fbox{1}}}]
+    [$\beta'\textrm{likes}_{\{\textrm{DP}_i\}}$,edge label={node[midway,left,font=\scriptsize]{\fbox{3}}}
+        [$\alpha'\textrm{Kim}$,edge label={node[midway,left,font=\scriptsize]{\fbox{1}}}]
+    ]   
+    [$\alpha'\textrm{Pete}$,edge label={node[midway,right,font=\scriptsize]{\fbox{2}}}]
+]

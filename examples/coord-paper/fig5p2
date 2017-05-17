@@ -1,0 +1,29 @@
+$\beta\textrm{likes}_{\{\textrm{DP}_i\}}$
+[TP
+	[$\textrm{TP}\ast$]
+	[Conj [and]]
+	[TP
+		[$\textrm{DP}_i$ [$e$]]
+		[T'
+			[T]
+			[VP
+				[DP [$t_i$]]
+				[V' [V [likes]]
+					[$\textrm{DP}_i\downarrow(1)$]]]
+		]
+	]
+]
+$\beta'\textrm{likes}_{\{\textrm{DP}_i\}}$
+[{$\langle e,t \rangle$}
+    [{$\langle e,t \rangle\ast$}] 
+    [$\wedge$]
+    [{$\langle e,t \rangle$}
+        [{$\lambda x$}]
+        [$t$
+            [$e\downarrow(1)$]
+            [{$\langle e,t \rangle$}
+                [{$\lambda y.\textrm{likes}(y, x)$}]
+            ]
+        ]
+    ]
+]

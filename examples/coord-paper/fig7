@@ -1,0 +1,36 @@
+$\gamma_2$ 
+[TP [TP
+		[$\textrm{DP}_i$ [D [Sue]]]
+		[T' 
+			[T] 
+			[VP [DP [$t_i$]]
+				[V' [V [hates]]
+					[DP [D [Pete] ]]]]]]
+	[Conj [and]]
+	[TP
+		[$\textrm{DP}_i$ [$\epsilon$]]
+		[T' 
+			[T] 
+			[VP [DP [$t_i$]]
+				[V' [V [likes]]
+					[DP [D [Kim]]]]]]]
+]
+$\gamma'_2$
+[$t$
+    [{$\langle e,t \rangle$}
+		[{$\langle e,t \rangle$}
+			[{$\lambda x$}]
+			[$t$
+				[$e$ [Pete]]
+				[{$\langle e,t \rangle$}
+					[{$\lambda y.\textrm{hates}(y, x)$}]]]]
+		[$\wedge$]
+		[{$\langle e,t \rangle$}
+			[{$\lambda x$}]
+			[$t$
+				[$e$ [Kim]]
+				[{$\langle e,t \rangle$}
+					[{$\lambda y.\textrm{likes}(y, x)$}]]]]
+	]
+	[$e$ [Sue]]
+]

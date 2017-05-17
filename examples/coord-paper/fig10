@@ -1,0 +1,50 @@
+$\gamma_6$ 
+[CP
+	[$\textrm{DP}_j$ [D [who]]]
+	[C' [C [does]]
+		[TP [TP
+				[$\textrm{DP}_i$ [D [Sue]]]
+				[T' 
+					[T] 
+					[VP [DP [$t_i$]]
+						[V' [V [like]]
+							[DP [$e$]]]]]]
+			[Conj [and]]
+			[TP
+				[$\textrm{DP}_i$ [D [Kim]]]
+				[T' 
+					[T] 
+					[VP [DP [$t_i$]]
+						[V' [V [hate]]
+							[DP [D [$t_j$]]]]]]]
+		]
+	]
+]
+$\gamma'_6$
+[$t$
+    [{$\langle \langle e,t \rangle, t \rangle$}
+		[{$\lambda P$}]
+		[$t$
+			[$\textrm{WH}x$]
+			[$t$ [$\textrm{person}(x)$]]
+			[$t$ [$P(x)$]]]]
+	[{$\langle e,t \rangle$}
+		[{$\lambda z$}]
+		[$t$
+			[{$\langle e,t \rangle$}
+				[{$\langle e,t \rangle$}
+					[{$\lambda x$}]
+						[$e$ [Sue]]
+						[{$\langle e,t \rangle$}
+							[{$\lambda y.\textrm{likes}(y, x)$}]]]
+				[$\wedge$]
+				[{$\langle e,t \rangle$}
+					[{$\lambda x$}]
+						[$e$ [Kim]]
+						[{$\langle e,t \rangle$}
+							[{$\lambda y.\textrm{hates}(y, x)$}]]]
+			]
+			[$e$ [$z$]]
+		]
+	]
+]
